@@ -12,8 +12,7 @@ class Data extends Component {
   };
   componentDidMount = () => {
     this.setState({ isLoading: true });
-    const url =
-      "https://hacker-news.firebaseio.com/v0/topstories.json";
+    const url = "https://hacker-news.firebaseio.com/v0/topstories.json";
 
     axios
       .get(url)
@@ -48,12 +47,9 @@ class Data extends Component {
           <h2 className="post-title">
             <a href={post.url}>{post.title}</a>
           </h2>
-          <a className="post-url" href={post.url}>
-            {post.url}
-          </a>
-          <p className="post-totalComment">
-            {post.type} posted by {post.by}{" "}
-            <TimeAgo date={post.time * 1000} />
+          <p className="post-labels">
+            {post.type} by {post.by} <TimeAgo date={post.time * 1000} /> |{" "}
+            {post.descendants} comments
           </p>
         </div>
       </div>
@@ -62,12 +58,11 @@ class Data extends Component {
 
     return (
       <div>
-        <h1>{`Homepage`}</h1>
-
-        {this.state.isLoading ? loading : data}
-        {this.state.err !== null
-          ? this.state.err
-          : null}
+        <h1>{`HN-React`}</h1>
+        <div className="posts-wrapper">
+          {this.state.isLoading ? loading : data}
+          {this.state.err !== null ? this.state.err : null}
+        </div>
       </div>
     );
   }

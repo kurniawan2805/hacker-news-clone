@@ -8,8 +8,9 @@ p {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f1d96b;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: #cfcfcf;
 }
 
 a {
@@ -17,12 +18,20 @@ a {
   color: black;
 }
 
+.posts-wrapper {
+  width: 60vw;
+  margin: 1rem auto;
+  padding: 10px;
+  /* background: #ffffff; */
+}
+
 .post {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   display: flex;
   justify-content: flex-start;
-  margin: 10px;
+  margin: 5px;
+
   /* align-items: center; */
 }
 
@@ -38,27 +47,24 @@ a {
   justify-content: center;
   align-items: center;
   min-width: 40px;
-  padding: 10px;
-  font-size: 1.5rem;
+  padding: 5px;
+  font-size: 1.2rem;
 }
 
 .post-content {
   padding: 10px;
   text-align: left;
-  background-color: #cecece;
+  background-color: #e9e9e9;
   box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.5);
   width: 100%;
 }
 
-.post-url {
-  color: blue;
-  font-size: 0.7rem;
-}
 .post-title {
   /* color: blue; */
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.post-totalComment {
+.post-labels {
   font-size: 0.7rem;
+  color: #707070;
 }
